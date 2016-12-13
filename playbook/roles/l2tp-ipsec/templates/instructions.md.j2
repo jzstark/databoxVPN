@@ -25,10 +25,10 @@ If the connection appears to time out, first check to make sure the passwords we
 1. Enter `{{ streisand_server_name }}` in the *Destination name* field.
 1. Check the *Don't connect now; just set it up so I can connect later* checkbox.
 1. Click *Next*.
-1. Enter `streisand` in the *User name* field.
+1. Enter `databox` in the *User name* field.
 1. Enter `{{ chap_password.stdout }}` in the *Password* field.
 1. Check the *Remember this password* checkbox.
-1. Click *Connect*, then click the *Close* button.
+1. Click *Create*, then click the *Close* button.
 1. Return to the Control Panel's *Network and Internet* section and click on the *Connect to a network* option.
 1. Right-click on the new *{{ streisand_server_name }}* connection and choose *Properties*.
 1. Click the *Options* tab and uncheck *Include Windows logon domain*.
@@ -50,7 +50,7 @@ You can verify that your traffic is being routed properly by [looking up your IP
 1. Enter `{{ streisand_server_name }}` for the *Service Name*.
 1. Click *Create*.
 1. Enter `{{ streisand_ipv4_address }}` for the *Server Address*.
-1. Enter `streisand` for the *Account Name*.
+1. Enter `databox` for the *Account Name*.
 1. Click the *Authentication Settings* button.
 1. In the *User Authentication* section, select the *Password* radio button and enter `{{ chap_password.stdout }}` as its value.
 1. In the *Machine Authentication* section, select the *Shared Secret* radio button and enter `{{ ipsec_preshared_key.stdout }}` as its value.
@@ -70,7 +70,7 @@ L2TP/IPsec connections are not supported out-of-the-box on most Linux distributi
 
     IPsec pre-shared key: {{ ipsec_preshared_key.stdout }}
 
-    CHAP user: streisand
+    CHAP user: databox
     CHAP pass: {{ chap_password.stdout }}
 
 <a name="android"></a>
@@ -85,7 +85,7 @@ L2TP/IPsec connections are not supported out-of-the-box on most Linux distributi
 1. Enter `{{ ipsec_preshared_key.stdout }}` in the *IPSec pre-shared key* field.
 1. Tap *Save*.
 1. Tap the *{{ streisand_server_name }}* connection.
-1. Enter `streisand` in the *Username* field.
+1. Enter `databox` in the *Username* field.
 1. Enter `{{ chap_password.stdout }}` in the *Password* field.
 1. Check the *Save account information* checkbox.
 1. Tap *Connect*.
@@ -115,7 +115,7 @@ L2TP/IPsec connections are not supported out-of-the-box on most Linux distributi
 1. Enter `{{ streisand_server_name }}` for the *Service name*.
 1. Make sure *Provider type* is *L2TP/IPSec + pre-shared key*.
 1. Enter `{{ ipsec_preshared_key.stdout }}` for the *Pre-shared key*.
-1. Enter `streisand` for the *Username*.
+1. Enter `databox` for the *Username*.
 1. Enter `{{ chap_password.stdout }}` for the *Password*.
 1. Click *Connect*.
 1. Once connected, you will see a VPN icon overlay on the network status icon. You can verify that your traffic is being routed properly by [looking up your IP address on Google](https://encrypted.google.com/search?hl=en&q=ip%20address). It should say *Your public IP address is {{ streisand_ipv4_address }}*.

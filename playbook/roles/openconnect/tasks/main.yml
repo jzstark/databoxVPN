@@ -149,7 +149,7 @@
 
 - name: Create an ocpasswd credentials file
   expect:
-    command: ocpasswd -c {{ ocserv_hashed_password_file }} streisand
+    command: ocpasswd -c {{ ocserv_hashed_password_file }} databox
     responses:
       "Enter password": "{{ ocserv_password.stdout }}"
       "Re-enter password": "{{ ocserv_password.stdout }}"

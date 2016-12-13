@@ -22,11 +22,11 @@ SSH Tunnel
 1. Make sure the `Auto` and `Dynamic` radio buttons are selected.
 1. Click *Add* to add the tunnel. You should see `D{{ ssh_default_socks_port }}` in the Forwarded ports box.
 1. Go to Connection --> SSH --> Auth.
-1. Download the `streisand_rsa.ppk` private key that is used to authenticate the SSH connection. Right-click; Save target as...
-   * [streisand\_rsa.ppk](/ssh/streisand_rsa.ppk)
+1. Download the `databox_rsa.ppk` private key that is used to authenticate the SSH connection. Right-click; Save target as...
+   * [databox\_rsa.ppk](/ssh/databox_rsa.ppk)
 1. Click the *Browse* button.
 1. Click the *PuTTY Private Key Files* drop down next to the *File name* field and choose *All Files*.
-1. Select the downloaded `streisand_rsa.ppk` file and click *Open*.
+1. Select the downloaded `databox_rsa.ppk` file and click *Open*.
 1. Go back to *Session* (the very first item in the left-hand menu).
 1. Enter `{{ streisand_server_name }}` in the first *Saved Sessions* box and click the *Save* button. The next time you launch PuTTY you can choose the session and click *Load* to restore all of these settings.
 1. Click *Open* to connect! PuTTY will ask you to confirm the fingerprint. Make sure it matches one of these:
@@ -57,18 +57,18 @@ Sshuttle is a simple VPN tunnelling solution that operates over the SSH transpor
 
 [Alternate SSH instructions](#linux-and-osx-alternate) are also available if you would like to avoid installing additional software.
 
-1. Download the `streisand_rsa` private key that is used to authenticate the SSH connection:
-   * [streisand\_rsa](/ssh/streisand_rsa)
-1. Copy the `streisand_rsa` file to the directory of your choice.
+1. Download the `databox_rsa` private key that is used to authenticate the SSH connection:
+   * [databox\_rsa](/ssh/databox_rsa)
+1. Copy the `databox_rsa` file to the directory of your choice.
 1. Set the correct permissions on the RSA key file:
-   * `chmod 600 streisand_rsa`
+   * `chmod 600 databox_rsa`
 1. Add a new entry to your `.ssh/config` file. It should look like this. Port `443` is available as a fallback option if you are on a network that restricts access to the default SSH port. Be sure to adjust the location of the IdentityFile:
 
          Host {{ streisand_server_name }}
            User         forward
            Port         {{ ssh_port }}
            HostName     {{ streisand_ipv4_address }}
-           IdentityFile ~/.ssh/streisand_rsa
+           IdentityFile ~/.ssh/databox_rsa
 
 1. Download [sshuttle](https://github.com/sshuttle/sshuttle) by running the following command in the directory of your choice:
 
@@ -94,16 +94,16 @@ Sshuttle is a simple VPN tunnelling solution that operates over the SSH transpor
 ### Linux and OS X (alternate) ###
 Sshuttle offers significantly faster performance and is easier to set up, but the following instructions will also get you connected if you are in a situation where you cannot install sshuttle.
 
-1. Download the `streisand_rsa` private key that is used to authenticate the SSH connection:
-   * [streisand\_rsa](/ssh/streisand_rsa)
-1. Copy the `streisand_rsa` file to the directory of your choice.
+1. Download the `databox_rsa` private key that is used to authenticate the SSH connection:
+   * [databox\_rsa](/ssh/databox_rsa)
+1. Copy the `databox_rsa` file to the directory of your choice.
 1. Add a new entry to your `.ssh/config` file. It should look like this. Port `443` is available as a fallback option if you are on a network that restricts access to the default SSH port. Be sure to adjust the location of the IdentityFile:
 
          Host {{ streisand_server_name }}
            User         forward
            Port         {{ ssh_port }}
            HostName     {{ streisand_ipv4_address }}
-           IdentityFile ~/.ssh/streisand_rsa
+           IdentityFile ~/.ssh/databox_rsa
 
 1. SSH into the server and forward a dynamic SOCKS port:
 
@@ -118,9 +118,9 @@ Sshuttle offers significantly faster performance and is easier to set up, but th
 <a name="android"></a>
 ### Android ###
 1. Install [SSH persistent tunnels](https://play.google.com/store/apps/details?id=org.ayal.SPT) by Shai Ayal. This application makes it easy to forward multiple ports through an SSH tunnel, and it does a decent job of ensuring that the tunnels remain active even when you switch back and forth regularly between LTE, 3G, and WiFi. The app is [open source](https://code.google.com/p/ssh-persistent-tunnel/) and can be compiled for free, but the Play Store version costs $1.50.
-1. Download the `streisand_rsa` private key that is used to authenticate the SSH connection:
-   * [streisand\_rsa](/ssh/streisand_rsa)
-1. Copy the `streisand_rsa` file to the root directory of your phone.
+1. Download the `databox_rsa` private key that is used to authenticate the SSH connection:
+   * [databox\_rsa](/ssh/databox_rsa)
+1. Copy the `databox_rsa` file to the root directory of your phone.
 1. Start the application. It will be listed as *SPT* in your launcher, and its icon looks like a train tunnel.
 1. Tap the menu icon in the lower-right of your screen.
 1. Tap *Settings*.
@@ -128,7 +128,7 @@ Sshuttle offers significantly faster performance and is easier to set up, but th
 1. Tap *User Name* and enter `forward`.
 1. Tap *Port* and enter `{{ ssh_port }}`.
    * Port `443` is available as a fallback option if you are on a network that restricts access to the default SSH port.
-1. Tap *Private Key File* and select the `streisand_rsa` file that you copied to your phone.
+1. Tap *Private Key File* and select the `databox_rsa` file that you copied to your phone.
 1. Tap *Dynamic Forward Port* and enter `1080`.
 1. Tap *Forwards* and enter `L8888=localhost:8888`.
 1. Go back and tap the *Connect Tunnel* button.

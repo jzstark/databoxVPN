@@ -1,6 +1,6 @@
 OpenConnect / Cisco AnyConnect
 -----------
-OpenConnect is an extremely high-performance and lightweight VPN server that also features full compatibility with the official Cisco AnyConnect clients. The [protocol](http://www.infradead.org/ocserv/technical.html) is built on top of standards like HTTP, TLS, and DTLS, and it's one of the most popular and widely used VPN technologies among large multi-national corporations. This means that in addition to its ease-of-use and speed, OpenConnect is also highly resistant to censorship and is almost never blocked.
+OpenConnect is an extremely high-performance and lightweight VPN server that also features full compatibility with the official Cisco AnyConnect clients. The [protocol](http://www.infradead.org/ocserv/technical.html) is built on top of standards like HTTP, TLS, and DTLS, and it's one of the most popular and widely used VPN technologies among large multi-national corporations.
 
 ---
 * Platforms
@@ -12,7 +12,7 @@ OpenConnect is an extremely high-performance and lightweight VPN server that als
 
 <a name="windows"></a>
 ### Windows ###
-1. Download the [OpenConnect GUI installer](/mirror/#openconnect).
+1. Download the [OpenConnect GUI installer](https://openconnect.github.io/openconnect-gui/).
 1. Run the OpenConnect GUI installer.
 1. Complete the TAP-Windows Setup Wizard.
    * Choose the default options, and allow the TAP driver from the OpenVPN project to be installed.
@@ -20,7 +20,7 @@ OpenConnect is an extremely high-performance and lightweight VPN server that als
 1. Click the *Edit* icon (pencil and notepad).
 1. Enter `{{ streisand_server_name }}` for the *Name*.
 1. Enter `{{ streisand_ipv4_address }}:{{ ocserv_port }}` for the *Gateway*.
-1. Enter `streisand` for the *Username* and click *Save*.
+1. Enter `databox` for the *Username* and click *Save*.
 1. Click *Connect*.
 1. A prompt will appear during the initial connection asking you to trust the server's certificate. Click *The information is accurate* and the server will be automatically verified for all future connections.
 1. Enter `{{ ocserv_password.stdout }}` for the *Password* and click *OK*.
@@ -45,7 +45,7 @@ OpenConnect is an extremely high-performance and lightweight VPN server that als
 
    `brew install openconnect`
 
-   * If installing Homebrew is not an option, you can also download and compile the [OpenConnect source code](/mirror/#openconnect).
+   * If installing Homebrew is not an option, you can also download and compile the [OpenConnect source code](http://www.infradead.org/openconnect/download.html).
 1. Download the CA and client certificate files:
    * [ca-cert.pem](/openconnect/ca-cert.pem)
    * [client.p12](/openconnect/client.p12)
@@ -72,7 +72,7 @@ OpenConnect is an extremely high-performance and lightweight VPN server that als
 1. Select the `ca-cert.pem` file that you just downloaded for the *CA Certificate*.
 1. Click *Save*.
 1. Select the VPN in the left-hand menu, and flip the switch to *ON*. You can also enable/disable the VPN by clicking on the WiFi/Network icon in the menu bar, scrolling to *VPN Connections*, and clicking on its name.
-1. Enter `streisand` for the *Username* and click *Login*.
+1. Enter `databox` for the *Username* and click *Login*.
 1. Enter `{{ ocserv_password.stdout }}` for the *Password*, check *Save passwords*, and click *Login*.
 1. You should be good to go! You can verify that your traffic is being routed properly by [looking up your IP address on Google](https://encrypted.google.com/search?hl=en&q=ip%20address). It should say *Your public IP address is {{ streisand_ipv4_address }}*.
 
