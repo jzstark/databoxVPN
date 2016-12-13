@@ -1,0 +1,30 @@
+Firewall Information
+--------------------
+These ports are open by default when Databox creates a new server from scratch on a supported provider.
+
+If you are installing Databox on an existing server or alternate provider then you need to make sure the firewall allows traffic to the new server on the following ports:
+
+---
+* L2TP/IPsec
+  * UDP - 500
+  * UDP - 1701
+  * UDP - 4500
+* Nginx (Databox Gateway)
+  * TCP - {{ nginx_port }}
+* OpenConnect / Cisco AnyConnect
+  * TCP - {{ ocserv_port }}
+  * UDP - {{ ocserv_port }}
+* OpenSSH
+  * TCP - {{ ssh_port }}
+* OpenVPN
+  * UDP - 53 to/from `10.8.0.1`
+    * This is the address that OpenVPN binds to on the virtual TUN interface that it creates. Dnsmasq listens for DNS traffic on this port and responds to requests from connected OpenVPN clients.
+  * TCP - {{ openvpn_port }}
+  * UDP - {{ openvpn_port_udp }}
+* Shadowsocks
+  * TCP - {{ shadowsocks_server_port }}
+* stunnel
+  * TCP - {{ stunnel_remote_port }}
+* Tor
+  * TCP - {{ tor_orport }} - Bridge
+  * TCP - {{ tor_obfs4_port }} - obfs4 pluggable transport
