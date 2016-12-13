@@ -25,7 +25,6 @@
     - openconnect
     - l2tp-ipsec
     - openvpn
-    - stunnel
     - shadowsocks
     - ssh
     - tinyproxy
