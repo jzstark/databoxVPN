@@ -1,4 +1,4 @@
-Your Databox Gateway contains step-by-step instructions for the services it provides, and mirrors of all necessary client software. The Gateway can be accessed over SSL or via a Tor Hidden Service.
+Your Databox Gateway contains step-by-step instructions for the services it provides, and mirrors of all necessary client software. The Gateway can be accessed over SSL.
 
 ---
 * [SSL Certificate Installation](#ssl)
@@ -11,7 +11,6 @@ Your Databox Gateway contains step-by-step instructions for the services it prov
   * [Manual Certificate Verification](#ssl-manual)
 * [Connecting to your Databox Gateway](#connecting)
   * [SSL](#connecting-ssl)
-  * [Tor Hidden Service](#connecting-tor)
 
 
 <a name="ssl"></a>
@@ -166,14 +165,5 @@ Each connection option takes you to the same place and you can use whichever one
 ### SSL ###
 [{{ streisand_gateway_url }}]({{ streisand_gateway_url }})
 
-username: `{{ streisand_gateway_username }}`  
-password: `{{ streisand_gateway_password.stdout }}`
-
-<a name="connecting-tor"></a>
-### Tor Hidden Service ###
-*All connections to Tor hidden services are fully encrypted.*
-
-[{{ tor_hidden_service_url }}]({{ tor_hidden_service_url }})
-
-username: `{{ streisand_gateway_username }}`  
+username: `{{ streisand_gateway_username }}`
 password: `{{ streisand_gateway_password.stdout }}`

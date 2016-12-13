@@ -29,9 +29,7 @@
     - shadowsocks
     - ssh
     - tinyproxy
-    - tor-bridge
     - sslh
     - monit
     - ufw
-    - streisand-mirror
     - streisand-gateway

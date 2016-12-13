@@ -2,5 +2,4 @@
 # localhost ansible_python_interpreter=python
 
 [databox-host]
-# 46.101.13.207 ansible_user=root
-128.232.87.29 ansible_user=roe2
+46.101.13.207 ansible_user=root
