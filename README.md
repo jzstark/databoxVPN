@@ -53,3 +53,11 @@ This toolset is deployed using [Ansible](https://www.ansible.com/), an automatio
 
     `./databoxVPN.sh`
   1. Wait for the setup to complete (several minutes) and in the databoxVPN/generated-docs folder open the html file, which will leads you to setup and connect VPNs.  
+
+## ToDo
+
+* Dockerize current toolset.
+
+## Acknowledgements
+
+This work is modified from [Streisand](https://github.com/jlund/streisand), a superb anti-censorship tool.
