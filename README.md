@@ -22,21 +22,23 @@ This toolset is deployed using [Ansible](https://www.ansible.com/), an automatio
   * pip
     * On Debian and Ubuntu
 
-      sudo apt-get install python-paramiko python-pip python-pycurl python-dev build-essential
+      `sudo apt-get install python-paramiko python-pip python-pycurl python-dev build-essential`
     * On Fedora
 
-      sudo yum install python-pip
+      `sudo yum install python-pip`
     * On OS X
 
+      ```
       sudo easy_install pip
       sudo pip install pycurl
+      ```
   * [Install Ansible](https://docs.ansible.com/ansible/intro_installation.html)
 
 - Prerequisites on remote server
   * Ubuntu 16.04 (Tested so far: DigitalOcean)
-  * Accept the SSH key of master machine as authrized_keys. If not, run:
+  * Must accept the SSH key of master machine as authrized_keys. If not, run:
 
-    ssh-copy-id *username*@*remote-server-ip*
+    `ssh-copy-id *username*@*remote-server-ip*`
 
 - Execution:
   On the **master machine**
@@ -50,4 +52,4 @@ This toolset is deployed using [Ansible](https://www.ansible.com/), an automatio
   1. Execute the script:
 
     `./databoxVPN.sh`
-  1. Wait for the setup to complete and in the databoxVPN/generated-docs folder open the html file, which will leads you to setup and connect VPNs.  
+  1. Wait for the setup to complete (several minutes) and in the databoxVPN/generated-docs folder open the html file, which will leads you to setup and connect VPNs.  
