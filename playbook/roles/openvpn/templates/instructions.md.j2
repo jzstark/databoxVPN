@@ -1,5 +1,7 @@
 OpenVPN
 -------
+SSL/TLS based user-space VPN. Supported on a wide range of platforms, including Windows, Android, iOS, OS X, Linux, Solaris, OpenBSD, FreeBSD, NetBSD.
+
 #### A note on client files ####
 For security reasons, OpenVPN clients typically have their own unique certificate and private key. The server you will be connecting to has been configured to allow clients to share the same certificate and private key, but you may still wish to give your phone and laptop different keys, for example.
 
@@ -118,7 +120,7 @@ It's preferable to configure Ubuntu using the OpenVPN plugin for NetworkManager.
 
 <a name="android"></a>
 ### Android ###
-1. Install [OpenVPN for Android](https://play.google.com/store/apps/details?id=de.blinkt.openvpn).
+1. Install [OpenVPN Connect](https://play.google.com/store/apps/details?id=net.openvpn.openvpn).
 1. Download one of these unified OpenVPN profiles:
 {% for client in openvpn_clients %}
    * [{{ client }}](/openvpn/{{ client }}/{{ openvpn_direct_profile_filename }})
@@ -126,11 +128,12 @@ It's preferable to configure Ubuntu using the OpenVPN plugin for NetworkManager.
    * *[Alternate profiles](#sslh-profiles) are available if you are on a network that only allows access to ports `80` and `443`.*
    * *[UDP profiles](#udp-profiles) are also available.*
 1. Copy the `{{ openvpn_direct_profile_filename }}` file to your phone.
-1. Launch OpenVPN for Android.
-1. Tap the folder icon in the lower-right of the screen.
+1. Launch OpenVPN Connect.
+1. Tap the icon in the upper-right of the screen.
+1. Select *Import*, then *Import Profile from SD card*
 1. Select the `{{ openvpn_direct_profile_filename }}` profile that you copied to your phone.
-1. Tap the save icon (floppy disk) in the lower-right of the screen after the import is complete.
-1. Tap the profile.
+1. Tap the *SELECT* button in the lower-left of the screen after the import is complete.
+1. Tap the "Connect" button.
 1. Accept the Android VPN connection warning.
 1. Success! You can verify that your traffic is being routed properly by [looking up your IP address on Google](https://encrypted.google.com/search?hl=en&q=ip%20address). It should say *Your public IP address is {{ streisand_ipv4_address }}*.
 
