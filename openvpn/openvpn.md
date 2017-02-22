@@ -28,7 +28,7 @@ For security reasons, OpenVPN clients typically have their own unique certificat
 1. Drag and drop the downloaded `databox.ovpn` file to this location alongside the README.
 1. Right-click on the OpenVPN icon in your taskbar and choose *Connect*.
 1. You will see a log scroll by as the connection is established, followed by a taskbar notification indicating your assigned IP.
-1. Success! You can verify that your traffic is being routed properly by [looking up your IP address on Google](https://encrypted.google.com/search?hl=en&q=ip%20address). It should say *Your public IP address is 178.62.33.140*.
+1. Success! You can verify that your traffic is being routed properly by [looking up your IP address on Google](https://encrypted.google.com/search?hl=en&q=ip%20address). It should say *Your public IP address is 138.68.155.178*.
 
 <a name="osx"></a>
 ### OS X ###
@@ -40,7 +40,7 @@ For security reasons, OpenVPN clients typically have their own unique certificat
 1. Double-click the OpenVPN profile.
 1. You will be asked to choose whether the profile should be available for all users or only the current user. After making your selection, you will be asked to enter your password.
 1. Look for the Tunnelblick icon in your menu bar. Click on it, and choose *Connect*.
-1. Success! You can verify that your traffic is being routed properly by [looking up your IP address on Google](https://encrypted.google.com/search?hl=en&q=ip%20address). It should say *Your public IP address is 178.62.33.140*.
+1. Success! You can verify that your traffic is being routed properly by [looking up your IP address on Google](https://encrypted.google.com/search?hl=en&q=ip%20address). It should say *Your public IP address is 138.68.155.178*.
 
 <a name="linux"></a>
 ### Linux ###
@@ -60,7 +60,7 @@ For security reasons, OpenVPN clients typically have their own unique certificat
 1. Change direction to the profile location, execute OpenVPN, and pass it the .ovpn profile as an option: 
     `sudo openvpn databox.ovpn`
 
-1. Success! You can verify that your traffic is being routed properly by [looking up your IP address on Google](https://encrypted.google.com/search?hl=en&q=ip%20address). It should say *Your public IP address is 178.62.33.140*.
+1. Success! You can verify that your traffic is being routed properly by [looking up your IP address on Google](https://encrypted.google.com/search?hl=en&q=ip%20address). It should say *Your public IP address is 138.68.155.178*.
 
 <a name="android"></a>
 ### Android ###
@@ -73,7 +73,7 @@ For security reasons, OpenVPN clients typically have their own unique certificat
 1. Tap the save icon (floppy disk) in the lower-right of the screen after the import is complete.
 1. Tap the profile.
 1. Accept the Android VPN connection warning.
-1. Success! You can verify that your traffic is being routed properly by [looking up your IP address on Google](https://encrypted.google.com/search?hl=en&q=ip%20address). It should say *Your public IP address is 178.62.33.140*.
+1. Success! You can verify that your traffic is being routed properly by [looking up your IP address on Google](https://encrypted.google.com/search?hl=en&q=ip%20address). It should say *Your public IP address is 138.68.155.178*.
 
 <a name="ios"></a>
 ### iOS ###
@@ -85,4 +85,4 @@ For security reasons, OpenVPN clients typically have their own unique certificat
 1. OpenVPN on your phone will say that *1 new OpenVPN profile is available for import*.
 1. Tap the green *+* button to import the profile.
 1. Tap the slider to connect to the OpenVPN server.
-1. Success! You can verify that your traffic is being routed properly by [looking up your IP address on Google](https://encrypted.google.com/search?hl=en&q=ip%20address). It should say *Your public IP address is 178.62.33.140*.
+1. Success! You can verify that your traffic is being routed properly by [looking up your IP address on Google](https://encrypted.google.com/search?hl=en&q=ip%20address). It should say *Your public IP address is 138.68.155.178*.
